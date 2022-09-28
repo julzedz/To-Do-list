@@ -23,7 +23,7 @@ const populateHtml = () => {
   itemList.innerHTML = tasksArray.map(
     (data, index) => `<li class="items">
           <div>
-            <input type="checkbox" class="todo-item" name="car">
+            <input type="checkbox" ${data.completed ? 'checked' : ''} class="todo-item" name="car">
             <label for="car">${data.description}</label>
           </div>
           <svg class="w-2 h-2 option" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -31,5 +31,7 @@ const populateHtml = () => {
             </path>
           </svg>
         </li>`
-  );
+  ).join(' ');
 }
+
+populateHtml()
