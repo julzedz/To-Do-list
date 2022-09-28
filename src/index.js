@@ -4,12 +4,12 @@ const tasksArray = [
   {
     description: "Fix car",
     completed: true,
-    id: 1,
+    id: 1
   },
   {
     description: "Wash dishes",
     completed: false,
-    id: 2,
+    id: 2
   },
   {
     description: "Complete project",
