@@ -98,11 +98,14 @@ svg {
   opacity: .3;
 }
 
-.todo-item {
+.items svg:hover {
+  opacity: 1;
+}
+
+.todo-item input {
   height: 1em;
   width: 1em;
-  padding: 1em;
-  border: 2px solid #c1c1c3;
+  border: .5em solid #c1c1c3;
 }
 
 label {
