@@ -1,5 +1,14 @@
-.refresh {
-  width: 15.5%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+width: 100%;
+overflow-x: hidden;
 }
 
 li {
@@ -11,13 +20,11 @@ svg {
   width: 1em;
   height: 1em;
   cursor: pointer;
-  background: saddlebrown;
 }
 
 .todo-wrap {
   margin: 0 auto;
   margin-top: 3em;
-  padding: 1em;
   background: beige;
   width: 40%;
   display: flex;
@@ -28,9 +35,41 @@ svg {
 
 .header {
   display: flex;
-  margin: auto;
-  background-color: aquamarine;
+  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  padding: 1em;
+  padding-right: 0em;
+  background: #e4e3e2;
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.refresh {
+  width: 2em;
+  height: 1em;
+  padding-right: 1em;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 1em;
+  border: none;
+}
+
+.todo-input::placeholder {
+  padding-left: .5em;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: 100;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
