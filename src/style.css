@@ -102,6 +102,7 @@ svg {
   height: 1em;
   width: 1em;
   padding: 1em;
+  border: 2px solid #c1c1c3;
 }
 
 label {
