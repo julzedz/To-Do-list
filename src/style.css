@@ -1,3 +1,14 @@
 .refresh {
   width: 1.5%;
 }
+
+li {
+  list-style: none;
+}
+
+svg {
+  fill: white;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
