@@ -88,15 +88,26 @@ svg {
   border-bottom: 0.2px solid #d3d3d3;
 }
 
+.items div {
+  display: flex;
+  align-items: center;
+}
+
 .items svg {
   cursor: move;
-  opacity: .2;
+  opacity: .3;
 }
 
 .todo-item {
   height: 1em;
   width: 1em;
   padding: 1em;
+}
+
+label {
+  padding-left: .7em;
+  word-spacing: .2em;
+  letter-spacing: 1px;
 }
 
 .clear-button {
