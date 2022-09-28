@@ -7,9 +7,9 @@
 }
 
 body {
-width: 100%;
-background: #f1f1ef;
-overflow-x: hidden;
+  width: 100%;
+  background: #f1f1ef;
+  overflow-x: hidden;
 }
 
 li {
@@ -32,8 +32,7 @@ svg {
   justify-content: center;
   align-items: center;
   background: #fff;
-  box-shadow: 0 0 10px #00000033;
-
+  box-shadow: 0 0 10px #0003;
 }
 
 .header {
@@ -54,7 +53,7 @@ svg {
 .refresh {
   width: fit-content;
   height: 1em;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .todo-input {
@@ -62,11 +61,10 @@ svg {
   padding: 1em;
   border: none;
   border-bottom: 0.2px solid #d3d3d3;
-
 }
 
 .todo-input::placeholder {
-  padding-left: .5em;
+  padding-left: 0.5em;
   font-size: 1.1em;
   font-style: italic;
   font-weight: 100;
@@ -95,7 +93,7 @@ svg {
 
 .items svg {
   cursor: move;
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .items svg:hover {
@@ -105,12 +103,12 @@ svg {
 .todo-item input {
   height: 1em;
   width: 1em;
-  border: .5em solid #c1c1c3;
+  border: 0.5em solid #c1c1c3;
 }
 
 label {
-  padding-left: .7em;
-  word-spacing: .2em;
+  padding-left: 0.7em;
+  word-spacing: 0.2em;
   letter-spacing: 1px;
 }
 
@@ -121,7 +119,7 @@ label {
   background: #d3d3d3;
   font-size: 1em;
   font-weight: lighter;
-  opacity: .5;
+  opacity: 0.5;
   cursor: pointer;
 }
 
