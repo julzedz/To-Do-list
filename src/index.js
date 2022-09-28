@@ -13,7 +13,7 @@ const tasksArray = [
   },
   {
     description: "Complete project",
-    completed: false,
+    completed: true,
     id: 3
   }
 ];
