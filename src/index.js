@@ -4,17 +4,17 @@ const tasksArray = [
   {
     description: 'Fix car',
     completed: true,
-    id: 1,
+    index: 1,
   },
   {
     description: 'Wash dishes',
     completed: false,
-    id: 2,
+    index: 2,
   },
   {
     description: 'Complete project',
     completed: true,
-    id: 3,
+    index: 3,
   },
 ];
 const itemList = document.querySelector('#item-list');
