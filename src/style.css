@@ -8,6 +8,7 @@
 
 body {
 width: 100%;
+background: #f1f1ef;
 overflow-x: hidden;
 }
 
@@ -25,12 +26,14 @@ svg {
 .todo-wrap {
   margin: 0 auto;
   margin-top: 3em;
-  background: beige;
   width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #fff;
+  box-shadow: 0 0 10px #00000033;
+
 }
 
 .header {
@@ -38,10 +41,9 @@ svg {
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 0.2px solid #a4a3a3;
+  border-bottom: 0.2px solid #d3d3d3;
   width: 100%;
   padding: 1em;
-  background: #e4e3e2;
 }
 
 .title {
@@ -50,14 +52,17 @@ svg {
 }
 
 .refresh {
-  width: 2em;
+  width: fit-content;
   height: 1em;
+  opacity: .5;
 }
 
 .todo-input {
   width: 100%;
   padding: 1em;
   border: none;
+  border-bottom: 0.2px solid #d3d3d3;
+
 }
 
 .todo-input::placeholder {
@@ -67,8 +72,45 @@ svg {
   font-weight: 100;
 }
 
-#wrapper {
+#item-list {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.items {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.2px solid #d3d3d3;
+}
+
+.items svg {
+  cursor: move;
+  opacity: .2;
+}
+
+.todo-item {
+  height: 1em;
+  width: 1em;
+  padding: 1em;
+}
+
+.clear-button {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+  background: #d3d3d3;
+  font-size: 1em;
+  font-weight: lighter;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
