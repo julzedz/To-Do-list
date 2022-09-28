@@ -38,9 +38,9 @@ svg {
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 0.2px solid #a4a3a3;
   width: 100%;
   padding: 1em;
-  padding-right: 0em;
   background: #e4e3e2;
 }
 
@@ -52,7 +52,6 @@ svg {
 .refresh {
   width: 2em;
   height: 1em;
-  padding-right: 1em;
 }
 
 .todo-input {
