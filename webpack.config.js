@@ -5,6 +5,8 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   devServer: {
+    watchFiles: ['src/*.html'],
+    hot: true,
     static: './dist',
   },
   plugins: [

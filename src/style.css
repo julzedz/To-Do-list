@@ -106,7 +106,7 @@ svg {
   border: 0.5em solid #c1c1c3;
 }
 
-label {
+.task {
   padding-left: 0.7em;
   word-spacing: 0.2em;
   letter-spacing: 1px;
@@ -139,4 +139,5 @@ label {
 
 .remove-btn {
   padding: 0 5px;
+  /* display: none; */
 }

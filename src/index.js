@@ -33,7 +33,7 @@ const populateHtml = () => {
     (data) => `<li class="items">
           <div>
             <input type="checkbox" ${data.completed ? 'checked' : ''} class="todo-item" name="car">
-            <label for="" <!--contenteditable="true"-->${data.description}</label>
+            <input for="" class="task" value="${data.description}">
           </div>
           <div>
             <svg class="w-2 h-2 option" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +67,36 @@ toDoInput.addEventListener('keypress', (e) => {
   }
 });
 
-const editDesc = (target) => {
-  target.contentEditable = true;
-  target.focus();
-}
+const label = document.querySelectorAll('.task');
+label.forEach((input, index) => input.addEventListener('change', () => {
+  tasksArray[index].description = input.value;
+  storage(tasksArray);
+}));
+
+// const editFnctn = (target) => {
+//   const removeBtn = document.querySelectorAll('.remove-btn');
+//   const option = document.querySelectorAll('.option');
+//   target.contentEditable = true;
+//   // target.focus();
+//   removeBtn.style.display = 'block';
+//   option.style.display = 'none';
+//   target.addEventListener('keypress', (e) => {
+//     if (e.keyCode === 13) {
+//       e.preventDefault();
+//       removeBtn.style.display = 'none';
+//       option.style.display = 'block';
+//       target.blur();
+//       populateHtml();
+//     }
+//   });
+// };
+// const editDesc = () => {
+//   const removeBtn = document.querySelectorAll('.remove-btn');
+//   removeBtn
+// }
+// editFnctn(label);
+// document.querySelectorAll('label').forEach((task, index) => task.addEventListener('click', () => {
+//   const id = index + 1;
+//   editFnctn([id]);
+//   populateHtml();
+// }));
