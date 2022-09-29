@@ -136,3 +136,7 @@ label {
   background: red;
   display: none;
 }
+
+#remove-btn {
+  padding: 0 5px;
+}
