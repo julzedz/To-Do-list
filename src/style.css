@@ -137,6 +137,6 @@ label {
   display: none;
 }
 
-#remove-btn {
+.remove-btn {
   padding: 0 5px;
 }

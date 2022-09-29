@@ -3,6 +3,25 @@ import './style.css';
 const itemList = document.querySelector('#item-list');
 const tasksArray = JSON.parse(localStorage.getItem('todo')) || [];
 
+class Todo {
+  constructor(description) {
+    this.id = tasksArray.length + 1;
+    this.description = description;
+    this.completed = false;
+  }
+
+  static updateIndex = () => {
+    tasksArray.forEach((data, index) => {
+      data.id = index + 1;
+    });
+  };
+
+  static removeTask = (index) => {
+    tasksArray.splice(index - 1, 1);
+    this.updateIndex();
+  };
+}
+
 const populateHtml = () => {
   itemList.innerHTML = tasksArray.map(
     (data, index) => `<li class="items">
@@ -15,30 +34,18 @@ const populateHtml = () => {
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z">
             </path>
           </svg>
-          <button ${index} id="remove-btn">x</button>
+          <button ${index} class="remove-btn">x</button>
           </div>
         </li>`,
   ).join(' ');
+  const removeBtn = document.querySelectorAll('.remove-btn');
+  removeBtn.forEach((btn, index) => btn.addEventListener('click', () => {
+    const item = index + 1;
+    Todo.removeTask(item);
+  }));
 };
 
 populateHtml();
-
-class Todo {
-  constructor(description) {
-    this.id = tasksArray.length + 1;
-    this.description = description;
-    this.completed = false;
-  }
-
-  static updateIndex = () => {
-    tasksArray.forEach((data, index) => { data.index = index + 1; });
-  }
-
-  static removeTask = (index) => {
-    tasksArray.splice(index - 1, 1);
-    this.updateIndex();
-  }
-}
 
 // const removeTask = (index) => {
 //   tasksArray.filter((data, id) => id !== index);
