@@ -1,4 +1,5 @@
 import './style.css';
+import Todo from './modules/additem.js';
 
 const tasksArray = [];
 const itemList = document.querySelector('#item-list');
@@ -21,14 +22,6 @@ const populateHtml = () => {
 populateHtml();
 
 const toDoInput = document.querySelector('#todo-input');
-
-class Todo {
-  constructor(id, description, completed) {
-    this.id = id;
-    this.description = description;
-    this.completed = completed;
-  }
-}
 
 toDoInput.addEventListener('keypress', (e) => {
   if (e.keyCode === 13) {
