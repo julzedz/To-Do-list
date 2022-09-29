@@ -108,8 +108,15 @@ svg {
 
 .task {
   padding-left: 0.7em;
+  padding-top: .3em;
+  padding-bottom: .3em;
   word-spacing: 0.2em;
   letter-spacing: 1px;
+  width: 90%;
+}
+
+.t-parent {
+  width: 100%;
 }
 
 .clear-button {
@@ -139,5 +146,4 @@ svg {
 
 .remove-btn {
   padding: 0 5px;
-  display: none;
 }

@@ -31,7 +31,7 @@ const populateHtml = () => {
   storage(tasksArray);
   itemList.innerHTML = tasksArray.map(
     (data) => `<li class="items">
-          <div>
+          <div class='t-parent'>
             <input type="checkbox" ${data.completed ? 'checked' : ''} class="todo-item" name="car">
             <input for="" class="task" value="${data.description}">
           </div>
@@ -79,3 +79,10 @@ label.forEach((input, index) => input.addEventListener('click', () => {
   removeBtn[index].style.display = 'inline';
   option[index].style.display = 'none';
 }));
+
+// label.forEach((input, index) => input.addEventListener('blur', () => {
+//   const removeBtn = document.querySelectorAll('.remove-btn');
+//   const option = document.querySelectorAll('.option');
+//   removeBtn[index].style.display = 'none';
+//   option[index].style.display = 'block';
+// }));
