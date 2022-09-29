@@ -127,3 +127,12 @@ label {
   opacity: 1;
   text-decoration: underline;
 }
+
+.remove {
+  width: 5%;
+  color: black;
+  position: relative;
+  z-index: +1;
+  background: red;
+  display: none;
+}

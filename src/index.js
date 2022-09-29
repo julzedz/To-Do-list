@@ -1,22 +1,6 @@
 import './style.css';
 
-const tasksArray = [
-  {
-    description: 'Fix car',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Wash dishes',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Complete project',
-    completed: true,
-    index: 3,
-  },
-];
+const tasksArray = [];
 const itemList = document.querySelector('#item-list');
 
 const populateHtml = () => {
@@ -35,3 +19,26 @@ const populateHtml = () => {
 };
 
 populateHtml();
+
+const toDoInput = document.querySelector('#todo-input');
+
+class Todo {
+  constructor(id, description, completed) {
+    this.id = id;
+    this.description = description;
+    this.completed = completed;
+  }
+}
+
+toDoInput.addEventListener('keypress', (e) => {
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    const description = toDoInput.value;
+    const completed = false;
+    const id = Date.now();
+    const newToDo = new Todo(id, description, completed);
+    tasksArray.push(newToDo);
+    populateHtml();
+    toDoInput.value = '';
+  }
+});
