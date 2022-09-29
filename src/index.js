@@ -73,30 +73,9 @@ label.forEach((input, index) => input.addEventListener('change', () => {
   storage(tasksArray);
 }));
 
-// const editFnctn = (target) => {
-//   const removeBtn = document.querySelectorAll('.remove-btn');
-//   const option = document.querySelectorAll('.option');
-//   target.contentEditable = true;
-//   // target.focus();
-//   removeBtn.style.display = 'block';
-//   option.style.display = 'none';
-//   target.addEventListener('keypress', (e) => {
-//     if (e.keyCode === 13) {
-//       e.preventDefault();
-//       removeBtn.style.display = 'none';
-//       option.style.display = 'block';
-//       target.blur();
-//       populateHtml();
-//     }
-//   });
-// };
-// const editDesc = () => {
-//   const removeBtn = document.querySelectorAll('.remove-btn');
-//   removeBtn
-// }
-// editFnctn(label);
-// document.querySelectorAll('label').forEach((task, index) => task.addEventListener('click', () => {
-//   const id = index + 1;
-//   editFnctn([id]);
-//   populateHtml();
-// }));
+label.forEach((input, index) => input.addEventListener('click', () => {
+  const removeBtn = document.querySelectorAll('.remove-btn');
+  const option = document.querySelectorAll('.option');
+  removeBtn[index].style.display = 'inline';
+  option[index].style.display = 'none';
+}));
