@@ -1,4 +1,5 @@
-/* eslint-disable no-use-before-define */
+import { tasksArray } from './var.js';
+
 export default class Todo {
   constructor(description) {
     this.id = tasksArray.length + 1;
@@ -17,6 +18,3 @@ export default class Todo {
     this.updateIndex();
   };
 }
-
-// eslint-disable-next-line import/first, import/no-cycle
-import { tasksArray } from '../index.js';

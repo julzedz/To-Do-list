@@ -1,14 +1,8 @@
 import './style.css';
-// eslint-disable-next-line import/no-cycle
 import Todo from './modules/addremove.js';
-
-const itemList = document.querySelector('#item-list');
-const tasksArray = JSON.parse(localStorage.getItem('todo')) || [];
-
-const storage = (todo) => {
-  todo.sort((a, b) => a.index - b.index);
-  localStorage.setItem('todo', JSON.stringify(todo));
-};
+import {
+  itemList, tasksArray, storage, toDoInput, label,
+} from './modules/var.js';
 
 const populateHtml = () => {
   storage(tasksArray);
@@ -37,8 +31,6 @@ const populateHtml = () => {
 
 populateHtml();
 
-const toDoInput = document.querySelector('#todo-input');
-
 toDoInput.addEventListener('keypress', (e) => {
   if (e.keyCode === 13) {
     e.preventDefault();
@@ -50,11 +42,7 @@ toDoInput.addEventListener('keypress', (e) => {
   }
 });
 
-const label = document.querySelectorAll('.task');
 label.forEach((input, index) => input.addEventListener('change', () => {
   tasksArray[index].description = input.value;
   storage(tasksArray);
 }));
-
-// eslint-disable-next-line import/prefer-default-export
-export { tasksArray };
