@@ -56,15 +56,5 @@ label.forEach((input, index) => input.addEventListener('change', () => {
   storage(tasksArray);
 }));
 
-label.forEach((input, index) => input.addEventListener('keypress', (e) => {
-  if (e.keyCode === 13) {
-    e.preventDefault();
-    tasksArray[index].description = input.value;
-    storage(tasksArray);
-    return true;
-  }
-  return false;
-}));
-
 // eslint-disable-next-line import/prefer-default-export
 export { tasksArray };
