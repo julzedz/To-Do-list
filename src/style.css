@@ -108,8 +108,8 @@ svg {
 
 .task {
   padding-left: 0.7em;
-  padding-top: .3em;
-  padding-bottom: .3em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
   word-spacing: 0.2em;
   letter-spacing: 1px;
   width: 90%;

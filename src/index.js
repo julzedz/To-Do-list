@@ -1,26 +1,9 @@
 import './style.css';
+// eslint-disable-next-line import/no-cycle
+import Todo from './modules/addremove.js';
 
 const itemList = document.querySelector('#item-list');
 const tasksArray = JSON.parse(localStorage.getItem('todo')) || [];
-
-class Todo {
-  constructor(description) {
-    this.id = tasksArray.length + 1;
-    this.description = description;
-    this.completed = false;
-  }
-
-  static updateIndex = () => {
-    tasksArray.forEach((data, index) => {
-      data.id = index + 1;
-    });
-  };
-
-  static removeTask = (index) => {
-    tasksArray.splice(index - 1, 1);
-    this.updateIndex();
-  };
-}
 
 const storage = (todo) => {
   todo.sort((a, b) => a.index - b.index);
@@ -36,10 +19,10 @@ const populateHtml = () => {
             <input for="" class="task" value="${data.description}">
           </div>
           <div>
-            <svg class="w-2 h-2 option" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <!-- <svg class="w-2 h-2 option" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z">
             </path>
-          </svg>
+          </svg> -->
           <button class="remove-btn">x</button>
           </div>
         </li>`,
@@ -73,16 +56,15 @@ label.forEach((input, index) => input.addEventListener('change', () => {
   storage(tasksArray);
 }));
 
-label.forEach((input, index) => input.addEventListener('click', () => {
-  const removeBtn = document.querySelectorAll('.remove-btn');
-  const option = document.querySelectorAll('.option');
-  removeBtn[index].style.display = 'inline';
-  option[index].style.display = 'none';
+label.forEach((input, index) => input.addEventListener('keypress', (e) => {
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    tasksArray[index].description = input.value;
+    storage(tasksArray);
+    return true;
+  }
+  return false;
 }));
 
-// label.forEach((input, index) => input.addEventListener('blur', () => {
-//   const removeBtn = document.querySelectorAll('.remove-btn');
-//   const option = document.querySelectorAll('.option');
-//   removeBtn[index].style.display = 'none';
-//   option[index].style.display = 'block';
-// }));
+// eslint-disable-next-line import/prefer-default-export
+export { tasksArray };
