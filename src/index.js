@@ -1,5 +1,4 @@
 import './style.css';
-// eslint-disable-next-line import/no-cycle
 import Todo from './modules/addremove.js';
 
 const itemList = document.querySelector('#item-list');
@@ -56,5 +55,4 @@ label.forEach((input, index) => input.addEventListener('change', () => {
   storage(tasksArray);
 }));
 
-// eslint-disable-next-line import/prefer-default-export
-export { tasksArray };
+export default tasksArray;
