@@ -4,7 +4,5 @@ import populateHtml from './modules/populate.js';
 import inputMethod from './modules/input.js';
 
 populateHtml();
-
 inputMethod();
-
 editFunction();
