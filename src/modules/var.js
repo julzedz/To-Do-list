@@ -5,8 +5,7 @@ const storage = (todo) => {
   localStorage.setItem('todo', JSON.stringify(todo));
 };
 const toDoInput = document.querySelector('#todo-input');
-const label = document.querySelectorAll('.task');
 
 export {
-  itemList, tasksArray, storage, toDoInput, label,
+  itemList, tasksArray, storage, toDoInput,
 };
