@@ -6,7 +6,7 @@ const populateHtml = () => {
   itemList.innerHTML = tasksArray.map(
     (data) => `<li class="items">
           <div class='t-parent'>
-            <input type="checkbox" ${data.completed ? 'checked' : ''} class="todo-item" name="car">
+            <input type="checkbox" class='box' ${data.completed ? 'checked' : ''} class="todo-item" name="car">
             <input for="" class="task" value="${data.description}">
           </div>
           <div>
