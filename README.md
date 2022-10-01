@@ -46,9 +46,9 @@ To get a local copy up and running follow these simple steps.
 
 👤 **Author1**
 
-- GitHub: [@didierganthier](https://github.com/julzedz)
-- Twitter: [@didierganthier_](https://twitter.com/julzedz)
-- LinkedIn: [didierganthier](https://www.linkedin.com/in/jules-edozie-b59b94234/)
+- GitHub: [@julzedz](https://github.com/julzedz)
+- Twitter: [@julzedz](https://twitter.com/julzedz)
+- LinkedIn: [Jules Edozie](https://www.linkedin.com/in/jules-edozie-b59b94234/)
 
 ## 🤝 Contributing
 
