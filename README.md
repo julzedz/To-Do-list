@@ -17,7 +17,7 @@
 
 
 ## Getting Started
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 1. Clone the project using `git clone` or just copy the command below:
   ```
    git clone https://github.com/julzedz/to-do-list.git
