@@ -11,6 +11,7 @@ const clearAll = () => {
     });
     storage(tasksArray);
     populateHtml();
+    window.location.reload();
   });
 };
 
