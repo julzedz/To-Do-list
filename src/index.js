@@ -1,14 +1,12 @@
-import _ from "lodash";
-import "./style.css";
+import './style.css';
+import editFunction from './modules/edittask.js';
+import populateHtml from './modules/populate.js';
+import inputMethod from './modules/input.js';
+import status from './modules/status.js';
+import clearAll from './modules/clear.js';
 
-function component() {
-  const element = document.createElement("div");
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-  element.classList.add("hello");
-
-  return element;
-}
-
-document.body.appendChild(component());
+populateHtml();
+inputMethod();
+editFunction();
+status();
+clearAll();
