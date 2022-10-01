@@ -11,6 +11,7 @@ const inputMethod = () => {
       tasksArray.push(newToDo);
       populateHtml();
       toDoInput.value = '';
+      window.location.reload();
     }
   });
 };
