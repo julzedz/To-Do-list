@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/julzedz/my-webpack.git"
+    "url": "git+https://github.com/julzedz/To-Do-list.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/julzedz/my-webpack/issues"
+    "url": "https://github.com/julzedz/To-Do-list/issues"
   },
   "homepage": "https://github.com/julzedz/my-webpack#readme",
   "devDependencies": {
