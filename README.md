@@ -13,7 +13,7 @@
 
 
 ## Live Demo
-[Checkout here](https://julzedz.github.io/To-Do-list/dist/)
+You can see a live demo of the project [here](https://julzedz.github.io/To-Do-list/dist/)
 
 
 ## Getting Started
