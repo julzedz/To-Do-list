@@ -18,9 +18,10 @@ You can see a live demo of the project [here](https://julzedz.github.io/To-Do-li
 
 ## Getting Started
 To get a local copy up and running follow these simple steps.
-1. Clone the project using `git clone` or just copy the command below:
+1. Clone the project using `git clone` or just follow the commands below:
   ```
    git clone https://github.com/julzedz/to-do-list.git
+   cd to-do-list
    ```
 2. Open the project with `Visual Studio Code`
 3. Run `npm install` to get the dependencies
@@ -54,7 +55,7 @@ To get a local copy up and running follow these simple steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/julzedz/Awesome-Books/issues).
 
 ## Show your support
 
@@ -67,4 +68,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT]() licensed.
